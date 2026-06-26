@@ -1,0 +1,9 @@
+:root {
+  /* Canonical KVSHVL platform tokens — sync kushalsamant.github.io :root to match */
+  --accent: #f12345;
+  --text-primary: #888888;
+  --text-muted: #aaaaaa;
+  --background: #ffffff;
+  --border: rgba(170, 170, 170, 0.45);
+  --accent-soft: rgba(241, 35, 69, 0.08);
+}

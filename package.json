@@ -1,0 +1,36 @@
+{
+  "name": "@kvshvl/platform-design-system",
+  "version": "0.1.0",
+  "private": true,
+  "description": "KVSHVL platform chrome — tokens, base CSS, layout components",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./tokens.css": "./dist/tokens.css",
+    "./base.css": "./dist/base.css",
+    "./pages.css": "./dist/pages.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && node scripts/copy-css.mjs",
+    "typecheck": "tsc --noEmit",
+    "check:css": "node scripts/check-css-consistency.mjs"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "react": "^19.0.0",
+    "typescript": "^5.8.0"
+  }
+}
