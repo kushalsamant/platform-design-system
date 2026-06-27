@@ -253,6 +253,61 @@ button:focus-visible,
   border-bottom-color: var(--accent);
 }
 
+/* Fixed header + footer; scrollable content (long archive / gallery pages). */
+html:has(.page-body--fixed-chrome) {
+  height: 100%;
+  overflow: hidden;
+}
+
+body:has(.page-body--fixed-chrome) {
+  height: 100%;
+  overflow: hidden;
+}
+
+.page-body--fixed-chrome {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  max-height: 100dvh;
+  overflow: hidden;
+  padding-top: max(1rem, env(safe-area-inset-top));
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+}
+
+.app-shell--fixed-chrome {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.app-shell--fixed-chrome .app-header {
+  flex-shrink: 0;
+  margin-bottom: 0;
+}
+
+.app-scroll-region {
+  flex: 1;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+.app-chrome-footer {
+  flex-shrink: 0;
+  padding-top: 0.75rem;
+}
+
+.app-chrome-footer .app-footer {
+  margin-top: 0;
+  padding-top: 0.75rem;
+}
+
 .auth-shell {
   max-width: 65ch;
   margin: 0;
@@ -302,6 +357,13 @@ button:focus-visible,
 @media (max-width: 760px) {
   .page-body {
     padding: 1rem;
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+
+  .page-body--fixed-chrome {
+    padding-top: max(0.75rem, env(safe-area-inset-top));
+    padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
   }
 
   .app-header-row {
@@ -311,6 +373,11 @@ button:focus-visible,
 
   .auth-actions {
     width: 100%;
+    gap: 0.45rem 0.65rem;
+  }
+
+  .header-link {
+    font-size: 0.88rem;
   }
 
   .auth-email {
@@ -322,6 +389,16 @@ button:focus-visible,
   .auth-actions button {
     flex: 0 1 auto;
     min-width: 0;
+  }
+
+  .app-footer {
+    gap: 0.45rem 0.85rem;
+    font-size: 0.88rem;
+  }
+
+  .app-shell,
+  .landing-shell {
+    gap: 1.25rem;
   }
 }
 
