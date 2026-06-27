@@ -69,6 +69,7 @@ Auth apps do **not** need `pages.css`, `AppLayout`, or `AppHeader`.
 3. **App-local CSS is the exception** — keep one small file per app for unique feature UI (compare viewer, 3D canvas, etc.).
 4. **Promote to the package** only when a **second** app needs the same styles.
 5. **Legal pages** live on [kvshvl.in](https://kvshvl.in). `AppFooter` is optional; link from About or footer when you want persistent legal links.
+6. **Pricing and account** live on each **product app** (`/pricing`, `/account`). The brand site has no `/pricing`. KVSHVL Pro is one subscription per account — app pages must say so and name current Pro apps explicitly.
 
 ---
 

@@ -15,6 +15,7 @@ const SHELL_CLASS: Record<ShellVariant, string> = {
 export interface AppHeaderProps {
   title?: string;
   subtitle?: string;
+  titleAsWordmark?: boolean;
   navLinks?: NavLink[];
   authSlot?: ReactNode;
 }
@@ -22,6 +23,7 @@ export interface AppHeaderProps {
 export function AppHeader({
   title,
   subtitle,
+  titleAsWordmark = false,
   navLinks = [],
   authSlot,
 }: AppHeaderProps) {
@@ -29,7 +31,12 @@ export function AppHeader({
     <header className="app-header">
       <div className="app-header-row">
         <div>
-          {title !== undefined && <h1>{title}</h1>}
+          {title !== undefined &&
+            (titleAsWordmark ? (
+              <p className="app-wordmark">{title}</p>
+            ) : (
+              <h1>{title}</h1>
+            ))}
           {subtitle !== undefined && <p>{subtitle}</p>}
         </div>
 
