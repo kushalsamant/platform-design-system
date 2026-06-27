@@ -12,6 +12,7 @@ const SHELL_CLASS: Record<ShellVariant, string> = {
 export interface AppLayoutProps {
   title?: string;
   subtitle?: string;
+  titleHref?: string;
   titleAsWordmark?: boolean;
   navLinks?: NavLink[];
   authSlot?: ReactNode;
@@ -24,6 +25,7 @@ export interface AppLayoutProps {
 export function AppLayout({
   title,
   subtitle,
+  titleHref,
   titleAsWordmark,
   navLinks,
   authSlot,
@@ -40,6 +42,7 @@ export function AppLayout({
         <AppHeader
           title={title}
           subtitle={subtitle}
+          titleHref={titleHref}
           titleAsWordmark={titleAsWordmark}
           navLinks={navLinks}
           authSlot={authSlot}

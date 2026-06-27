@@ -82,11 +82,15 @@ const navLinks: NavLink[] = [
 
 ### Auth shell
 
+Uses the same KVSHVL header (wordmark links to kvshvl.in) and legal footer as product apps:
+
 ```tsx
-<AuthShell title="Sign in">
+<AuthShell>
   <button type="button" className="action-primary">Continue with Google</button>
 </AuthShell>
 ```
+
+Pass `title` for error or status headings below the header.
 
 ## App config pattern
 

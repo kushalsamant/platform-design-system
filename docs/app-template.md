@@ -82,7 +82,6 @@ One file per app exports header navigation:
 import type { NavLink } from "@kvshvl/platform-design-system";
 
 export const navLinks: NavLink[] = [
-  { href: "/", label: "Home" },
   { href: "/pricing", label: "Pricing" },
   { href: "/account", label: "Account" },
   { href: "/about", label: "About" },
@@ -119,19 +118,22 @@ export function PlatformAppLayout({ title, subtitle, ...props }: PlatformAppLayo
 ```
 
 - `authSlot` — app-owned sign-in/out (platform JWT, NextAuth, etc.).
+- Header `title` links to `/` by default (`titleHref`); do not add a separate Home nav link.
 - `shellVariant="wide"` — default product width (1180px).
 - `shellVariant="content"` — narrower about/landing width.
 - `footer` — optional `<AppFooter />`; not required if About links to kvshvl.in legal URLs.
 
-Auth-only apps use `AuthShell` instead:
+Auth-only apps use `AuthShell`, which wraps the same KVSHVL header and legal footer as product apps:
 
 ```tsx
 import { AuthShell } from "@kvshvl/platform-design-system";
 
-<AuthShell title="Sign in">
-  <button type="button" className="action-primary">Continue with Google</button>
+<AuthShell title="Sign-in error">
+  <p className="text-muted">Your message here.</p>
 </AuthShell>
 ```
+
+Omit `title` on the main sign-in screen — the header already shows the KVSHVL wordmark and tagline.
 
 ---
 
