@@ -158,7 +158,7 @@ const nextConfig = {
 export default nextConfig;
 ```
 
-Reference: [`auth/next.config.ts`](../../auth/next.config.ts).
+Reference: [`platform-auth/next.config.ts`](../../platform-auth/next.config.ts).
 
 ---
 
@@ -171,7 +171,7 @@ npm run build
 npm run check:css
 ```
 
-`check:css` confirms token alignment with the brand site, and that `auth` and `checkyourdrawings` import the package correctly.
+`check:css` confirms token alignment with the brand site, and that `platform-auth` and `checkyourdrawings` import the package correctly.
 
 In the consuming app:
 
@@ -188,4 +188,4 @@ npm run build
 | `tokens.css`, `base.css`, `pages.css` | `platform-design-system` |
 | Feature UI (compare, viewer, etc.) | Each app's repo |
 
-Edit tokens in `platform-design-system/src/tokens.css` only. When tokens change, sync the brand site `:root` block in `kushalsamant.github.io` (or run a future copy script) so `check:css` keeps passing.
+Edit tokens in `platform-design-system/src/tokens.css` only. When tokens change, sync the brand site `:root` block in `kvshvl` (or run a future copy script) so `check:css` keeps passing.

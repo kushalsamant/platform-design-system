@@ -118,9 +118,9 @@ npm run check:css
 
 This verifies:
 
-- `kushalsamant.github.io/assets/css/main.css` `:root` matches `src/tokens.css`
+- `kvshvl/assets/css/main.css` `:root` matches `src/tokens.css`
 - `html` font-size matches between `base.css` and the brand site
-- `auth` imports platform CSS via `globals.css`
+- `platform-auth` imports platform CSS via `globals.css`
 - `checkyourdrawings` imports `tokens.css`, `base.css`, and `pages.css`
 
 **Rule:** Edit tokens in `src/tokens.css` only. Sync the brand site `:root` block when tokens change.

@@ -28,7 +28,7 @@ function parseHtmlFontSize(css) {
 
 const canonicalTokensPath = path.join(root, "src", "tokens.css");
 const canonicalBasePath = path.join(root, "src", "base.css");
-const brandCssPath = path.join(workspaceRoot, "kushalsamant.github.io", "assets", "css", "main.css");
+const brandCssPath = path.join(workspaceRoot, "kvshvl", "assets", "css", "main.css");
 
 const canonicalTokens = parseRootTokens(readFileSync(canonicalTokensPath, "utf8"));
 const brandTokens = parseRootTokens(readFileSync(brandCssPath, "utf8"));
@@ -39,13 +39,13 @@ const errors = [];
 
 for (const [name, value] of Object.entries(canonicalTokens)) {
   if (brandTokens[name] !== value) {
-    errors.push(`kushalsamant.github.io missing or mismatched ${name}: expected "${value}", got "${brandTokens[name] ?? "missing"}"`);
+    errors.push(`kvshvl missing or mismatched ${name}: expected "${value}", got "${brandTokens[name] ?? "missing"}"`);
   }
 }
 
 if (canonicalHtml !== brandHtml) {
   errors.push(
-    `html font-size mismatch: platform-design-system has "${canonicalHtml}", kushalsamant.github.io has "${brandHtml}"`,
+    `html font-size mismatch: platform-design-system has "${canonicalHtml}", kvshvl has "${brandHtml}"`,
   );
 }
 
