@@ -1,7 +1,7 @@
 {
   "name": "@kvshvl/platform-design-system",
   "version": "0.1.0",
-  "private": true,
+
   "description": "KVSHVL platform chrome — tokens, base CSS, layout components",
   "type": "module",
   "main": "./dist/index.js",
