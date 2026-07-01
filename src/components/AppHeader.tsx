@@ -12,6 +12,10 @@ const SHELL_CLASS: Record<ShellVariant, string> = {
   content: "landing-shell",
 };
 
+export const GLOBAL_NAV_LINKS: NavLink[] = [
+  { href: "https://kvshvl.in/#research", label: "Research" },
+];
+
 export interface AppHeaderProps {
   title?: string;
   subtitle?: string;

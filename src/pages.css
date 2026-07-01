@@ -42,7 +42,7 @@ h2 {
   font-weight: 600;
   letter-spacing: normal;
   line-height: 1.25;
-  margin: 0.35rem 0 0;
+  margin: 2rem 0 1rem;
   text-transform: none;
   color: var(--text-primary);
 }
@@ -212,4 +212,64 @@ h2 {
 
 .account-details dd {
   margin: 0;
+}
+
+/* ---------- Side tabs (CTA stack) ---------- */
+
+.side-tabs {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  z-index: 1000;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.side-tab {
+  padding: 0.85rem 0.55rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  color: var(--accent);
+  background: var(--background);
+  border: 1px solid var(--accent);
+  border-radius: 0.35rem 0 0 0.35rem;
+  box-shadow: -2px 2px 12px rgba(0, 0, 0, 0.06);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, padding-right 0.2s ease;
+}
+
+.side-tab:hover {
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+  padding-right: 0.7rem;
+}
+
+@media (max-width: 768px) {
+  .side-tabs {
+    top: auto;
+    /* Pushed higher up to prevent overlapping the footer */
+    bottom: max(7.5rem, calc(env(safe-area-inset-bottom) + 6.5rem));
+    left: 0.5rem;
+    right: auto;
+    transform: none;
+    flex-direction: row;
+    gap: 0.35rem;
+  }
+
+  .side-tab {
+    writing-mode: horizontal-tb;
+    text-orientation: mixed;
+    font-size: 0.62rem;
+    padding: 0.45rem 0.55rem;
+    border-radius: 0.35rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  }
 }
