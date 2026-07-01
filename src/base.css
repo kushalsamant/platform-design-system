@@ -339,12 +339,12 @@ body:has(.page-body--fixed-chrome) {
 
 @media (min-width: 768px) {
   .page-body {
-    padding: 3rem;
+    padding: max(1.5rem, 4vh) 3rem;
   }
 
   .app-shell,
   .landing-shell {
-    gap: 2rem;
+    gap: 1.5rem;
   }
 }
 
