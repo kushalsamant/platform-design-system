@@ -58,7 +58,8 @@ h2 {
 }
 
 .landing-content p {
-  margin: 0;
+  margin: 0 0 1.2rem;
+  line-height: 1.7;
   max-width: 65ch;
 }
 
