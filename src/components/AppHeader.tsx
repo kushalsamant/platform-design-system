@@ -13,7 +13,7 @@ const SHELL_CLASS: Record<ShellVariant, string> = {
 };
 
 export const GLOBAL_NAV_LINKS: NavLink[] = [
-  { href: "https://kvshvl.in/#research", label: "Research" },
+  { href: "https://www.kvshvl.in/research", label: "Research" },
 ];
 
 export interface AppHeaderProps {

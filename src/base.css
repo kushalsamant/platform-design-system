@@ -400,6 +400,7 @@ body:has(.page-body--fixed-chrome) {
   .app-footer {
     gap: 0.45rem 0.85rem;
     font-size: 0.88rem;
+    padding-bottom: 3.5rem; /* Safe zone for fixed side-tabs */
   }
 
   .app-shell,
