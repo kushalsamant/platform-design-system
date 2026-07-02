@@ -56,14 +56,14 @@ export function AppHeader({
         </div>
 
         {(navLinks.length > 0 || authSlot !== undefined) && (
-          <div className="auth-actions">
+          <nav className="auth-actions" aria-label="Main Navigation">
             {navLinks.map((link) => (
               <a key={link.href} href={link.href} className="header-link">
                 {link.label}
               </a>
             ))}
             {authSlot}
-          </div>
+          </nav>
         )}
       </div>
     </header>
